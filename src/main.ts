@@ -66,19 +66,6 @@ class State {
 
 const stateC = new State(initialState.todos, initialState.filter);
 
-//
-// Prepare todos html
-//
-
-/*
-    Template example:
-    <li>
-        <input class="toggle" type="checkbox" checked>
-        <label>aaa</label>
-        <button class="destroy"></button>
-    </li>
-*/
-
 function createHtmlWithCreateElement(todos: TodoEntry[], targetEl: Element) {
     targetEl.innerHTML = ''
 
@@ -163,13 +150,6 @@ inputEl.addEventListener('keyup', (event) => {
     createHtmlWithCreateElement(stateC.todos, todoListEl);
 })
 
-//
-// Prototype expansion
-// //
-// Object.prototype.addTimestamp = function () {
-//     this.timestamp = Date.now();
-// }
-
 class FilterEntry {
     name: string;
     filterEl: HTMLInputElement;
@@ -188,13 +168,6 @@ const filters: { [key: string]: HTMLInputElement; } = {
     active: document.querySelector('#filter-active'),
     completed: document.querySelector('#filter-completed')
 };
-// filters['all'] = document.querySelector('#filter-all');
-// const filters = {
-// all: document.querySelector('#filter-all'),
-// active: document.querySelector('#filter-active'),
-// completed: document.querySelector('#filter-completed')
-//     // new FilterEntry('all', document.querySelector('#filter-all'));
-// };
 
 // Tady muze byt const, protoze to filterName pokuzde deklarujeme nove, neprepisujeme
 // object desctructering
@@ -206,15 +179,6 @@ for (const [filterName, filterEl] of Object.entries(filters)) {
         filtersClick(filterName);
     });
 }
-
-
-// (function (capturedFilterName) {
-//     // zde staci jen volat zavorkami, bez parametru
-//     filterEl.addEventListener('click', () => {
-//         filtersClick(capturedFilterName);
-//     });
-// }(filterName));
-// }
 
 function filtersClick(newFilterType: string) {
     // Remove 'selected' class on all filter buttons
