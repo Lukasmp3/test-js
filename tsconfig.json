@@ -3,6 +3,9 @@
       "target": "es2017",
       "module": "commonjs",
       "sourceMap": true,
-      "outDir": "js"
+      "outDir": "js",
+      "strict": true,
+      "noUnusedLocals": true,
+		  "noUnusedParameters": true
     }
   }
