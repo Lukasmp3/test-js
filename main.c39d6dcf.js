@@ -151,7 +151,7 @@ var TodoEntry = function TodoEntry(text, completed) {
 
 
 var initialState = {
-  todos: [new TodoEntry('Hi', true), new TodoEntry('Hello', false), new TodoEntry('Hi there!', true)],
+  todos: [new TodoEntry('Hi', true), new TodoEntry('Hello there', false), new TodoEntry('Hi there!', true)],
   filter: 'all'
 }; //
 // Class containing state
@@ -407,7 +407,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35827" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44629" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
